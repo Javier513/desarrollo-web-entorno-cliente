@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Davante Dent - Gestión de citas</title>
+    <link rel="stylesheet" href="DavanteDent.css">
+</head>
+<body>
+    <header>
+        <h1>Gestión de citas</h1>
+    </header>
+
+    <form id="citaForm">
+        <input type="hidden" id="citaID">
+
+        <div class="form-group">
+            <label for="dia">Dia:</label>
+            <input type="number" id="dia" min="1" max="31" required>
+            <span class="error" id="diaError"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="mes">Mes:</label>
+            <input type="number" id="mes" min="1" max="12" required>
+            <span class="error" id="mesError"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="anio">Año:</label>
+            <input type="number" id="anio" required>
+            <span class="error" id="anioError"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="hora">Hora:</label>
+            <input type="number" id="hora" min="0" max="23" required>
+            <span class="error" id="horaError"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="minuto">Minuto:</label>
+            <input type="number" id="minuto" min="0" max="59" required>
+            <span class="error" id="minutoError"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" required>
+            <span class="error" id="nombreError"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="apellidos">Apellidos:</label>
+            <input type="text" id="apellidos" required>
+            <span class="error" id="apellidosError"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="dni">DNI:</label>
+            <input type="text" id="dni" required>
+            <span class="error" id="dniError"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+            <span class="error" id="emailError"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="telefono">Telefono:</label>
+            <input type="text" id="telefono" required>
+            <span class="error" id="telefonoError"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="fechaNacimiento">Fecha de nacimiento:</label>
+            <input type="date" id="fechaNacimiento" required>
+            <span class="error" id="fechaNacimientooError"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="observaciones">Observaciones:</label>
+            <input type="text" id="observaciones">
+            <span class="error" id="observacionesError"></span>
+        </div><br>
+
+        <button type="button" id="guardarBtn">Guardar cita</button>
+    </form><br>
+
+    <table id="citasTabla">
+        <thead>
+            <tr>
+                <th>Orden</th>
+                <th>Fecha</th>
+                <th>Nombre</th>
+                <th>Apellidos</th>
+                <th>DNI</th>
+                <th>Email</th>
+                <th>Telefono</th>
+                <th>Fecha de nacimiento</th>
+                <th>Observaciones</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody id="citasBody">
+            <!-- SE LLENARAN DINAMICAMENTE -->
+        </tbody>
+    </table>
+
+    <footer>
+        <p>DavanteDent  |   info@davantedent.com    |   Telf: 123-456-789</p>
+    </footer>
+
+    <script src="storage.js"></script>
+    <script src="citas.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-image: url('davantedent.png');
+    background-size: contain;      /* MANTIENE PROPORCIONES DEL LOGO */
+    background-position: center;   /* CENTRADO EN LA PAGINA */
+    background-repeat: no-repeat;  /* NO SE REPITE */
+    background-attachment: fixed;  /* FIJO AL HACER SCROLL */
+    background-color: #f8f9fa;     /* COLOR DE FONDO GRIS CLARO PARA CONTRASTES */
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0); /*CAPA BLANCA SEMITRANSPARENTE */
+    z-index: -5; /* DETRAS DEL CONTENIDO */
+}
+
+header, form, table, footer {
+    position: relative;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.678);  /* FONDO TRANSPARENTE VISIBLE DEL LOGO EN EL FORMULARIO */
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+/* PARA QUE LOS CAMPOS DEL FORMULARIO SEAN TAMBIEN TRANSPARENTES */
+.form-group input,
+.form-group textarea {
+    background-color: rgba(255, 255, 255, 0);       /* FONDO BLANCO SEMITRANSPARENTE EN LOS INPUTS */
+    border: 1px solid rgba(11, 9, 9, 0.184);
+    color: #1e1c28a1;        /* TEXTO DENTRO DE LOS RECUADROS */
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    box-shadow: grey 12px 12px 12px;
+}
+
+h1 {
+    margin: 0;
+    color: #333;  
+}
+
+h1:hover {
+    color: #2b07f5; /* CAMBIA EL COLOR AL PASAR EL RATON */
+    transition: color 0.1s;
+    transform: scale(1.5);
+}
+
+.form-group {
+    margin-bottom: 12px;
+}
+
+label {
+    display: block;
+    margin-bottom: 3px;
+    font-weight: bold;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+/*
+.error {
+    color: rgb(255, 10, 10);
+    font-size: 0.85em;
+    margin-left: 10px;
+}
+
+input.error-input {
+    border: 2px solid rgb(255, 10, 10);
+}
+*/
+
+/* RESALTA EN ROJO LOS CAMPOS INVALIDOS USANDO VALIDACION NATIVA DEL NAVEGADOR */
+input:invalid {
+    border: 2px solid rgb(255, 10, 10) !important;
+    background-color: #ffeeee;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+}
+
+th, td {
+    border: 1px solid white;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: rgba(71, 71, 196, 0.264);
+}
+
+footer {
+    text-align: center;
+    margin-top: 10px;
+}
